@@ -30,6 +30,7 @@ import com.satverse.bookbox.ui.screens.reader.composables.ReaderDetailScreen
 import com.satverse.bookbox.ui.screens.reader.composables.ReaderScreen
 import com.satverse.bookbox.ui.screens.settings.composables.AboutScreen
 import com.satverse.bookbox.ui.screens.settings.composables.OSLScreen
+import com.satverse.bookbox.ui.screens.settings.composables.PrivacyPolicy
 import com.satverse.bookbox.ui.screens.settings.composables.SettingsScreen
 import com.satverse.bookbox.ui.screens.welcome.composables.WelcomeScreen
 
@@ -377,6 +378,27 @@ fun NavGraph(
             },
         ) {
             AboutScreen(navController = navController)
+        }
+
+        /** Privacy Policy Screen */
+        composable(
+            route = Screens.PrivacyPolicy.route,
+            enterTransition = {
+                slideInHorizontally(
+                    initialOffsetX = { 300 }, animationSpec = tween(
+                        durationMillis = 300, easing = FastOutSlowInEasing
+                    )
+                ) + fadeIn(animationSpec = tween(300))
+            },
+            popExitTransition = {
+                slideOutHorizontally(
+                    targetOffsetX = { 300 }, animationSpec = tween(
+                        durationMillis = 300, easing = FastOutSlowInEasing
+                    )
+                ) + fadeOut(animationSpec = tween(300))
+            },
+        ) {
+            PrivacyPolicy(navController = navController)
         }
     }
 }

@@ -75,6 +75,8 @@
     <string name="license_setting_desc">Open source licenses.</string>
     <string name="about_setting">App Information</string>
     <string name="about_setting_desc">Show App information &amp; useful links</string>
+    <string name="settings_privacy_policy">Privacy Policy</string>
+    <string name="settings_privacy_policy_desc">Show Privacy Policy of Bookbox</string>
 
     <!-- Books card -->
     <string name="cover_image_desc">Book cover image</string>
@@ -93,6 +95,21 @@
     <!-- About Screen -->
     <string name="about_header">About</string>
     <string name="about_desc">A free &amp; open source android application to download ebooks from the Project GutenBerg.</string>
+    <string name="privacy_policy">"Thank you for using Bookbox, a platform to access ebooks from Project Gutenberg.
+
+    1. Data Collection: We gather minimal data, mainly for app improvement and troubleshooting.
+
+    2. Data Usage: Any information collected is solely used to enhance app functionality and improve user experience.
+
+    3. Sharing: We don’t share your personal data. Aggregated, non-personal user data may be used for analysis.
+
+    4. Data Retention: We only store data as long as needed for its intended purpose.
+
+    5. Security: While we prioritize your security, remember that no online transmission is ever completely secure.
+
+    6. Third-Party Services: We use the GutenDex API to fetch ebook metadata. Their own policies apply for their platform.
+
+    By using Bookbox, you agree to these terms. For questions or clarifications, please contact our support."</string>
     <string name="developed_by">Developed By</string>
     <string name="dev_name" translatable="false">Satyam Sharma</string>
     <string name="dev_username" translatable="false">\@satyamsharma17</string>

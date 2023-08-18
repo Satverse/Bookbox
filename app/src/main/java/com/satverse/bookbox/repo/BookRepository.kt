@@ -136,7 +136,7 @@ class BookRepository {
     private suspend fun setApiUrlIfNotSetAlready() {
         if (!this::baseApiUrl.isInitialized) {
             val request = Request.Builder().get()
-                .url("https://raw.githubusercontent.com/satyamsharma17/Bookbox/master/my-api-url")
+                .url("https://raw.githubusercontent.com/satyamsharma17/Bookbox/master/my-api-url?token=GHSAT0AAAAAACESBMTSGJT6DWH6CTWKTSMSZG7VQSQ")
                 .build()
             val response = suspendCoroutine { continuation ->
                 okHttpClient.newCall(request).enqueue(object : Callback {
