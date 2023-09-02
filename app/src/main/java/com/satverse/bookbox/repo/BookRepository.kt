@@ -133,28 +133,9 @@ class BookRepository {
         }
     }
 
-    private suspend fun setApiUrlIfNotSetAlready() {
+    private fun setApiUrlIfNotSetAlready() {
         if (!this::baseApiUrl.isInitialized) {
-            val request = Request.Builder().get()
-                .url("https://raw.githubusercontent.com/satyamsharma17/Bookbox/master/my-api-url?token=GHSAT0AAAAAACESBMTSGJT6DWH6CTWKTSMSZG7VQSQ")
-                .build()
-            val response = suspendCoroutine { continuation ->
-                okHttpClient.newCall(request).enqueue(object : Callback {
-                    override fun onFailure(call: Call, e: IOException) {
-                        continuation.resumeWithException(e)
-                    }
-
-                    override fun onResponse(call: Call, response: Response) {
-                        response.use {
-                            continuation.resume(
-                                response.body!!.string()
-                            )
-                        }
-                    }
-                })
-            }
-            val jsonObj = JSONObject(response)
-            baseApiUrl = jsonObj.getString("api_url")
+            baseApiUrl = "https://www.pooloftears.tk/books"
         }
     }
 
